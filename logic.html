@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>曾健乾的线上便签条</title>
+    <style>  
+      body {
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+	  <h1>正文</h1>
+ <p id="dyg">1</p>  
+<script>
+   // document.getElementById("dyg")="这是一个测试"
+ </script>
+ <script>
+function PostC(){
+let  headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 Edg/120.0.0.0',
+    'Referer': 'http://112.94.69.58:8086/admin/login',
+    'Host': '112.94.69.58:8086', }
+let url = "http://112.94.69.58:8086/admin"
+let payload = "username=88BE730E89BB45128D2A86B8F6136BC7A7A40E2FF2EDE5D3&password=7137CE3439BD902AC1592E5093AA4A8701DCC371F93AE57A"
+let session = requests.session()  // 建立一个会话
+let response=session.post(url, data=payload,headers=headers)
+ // let response= requests.get(url,headers=headers)
+   document.getElementById('Cookie')= response.headers['Set-Cookie']
+let Set= response.headers['Set-Cookie']
+}   
+</script>
+<p id="Cookie">Cookie</p>
+<p>Set </p>
+  <script>
+ 
+ // import base64
+ 
+//from PIL import Image
+//from lxml import etree
+ 
+//import requests
+ 
+//headers = {
+ //   'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 Edg/120.0.0.0',
+ //   'Referer': 'http://112.94.69.58:8086/admin/login',
+ //   'Host': '112.94.69.58:8086',
+ //    ｝
+ //   def login_before():
+
+ //   url = "http://112.94.69.58:8086/admin"
+  //  response= requests.get(url,headers=headers)
+  //  print(response.headers['Set-Cookie'])
+ //   print("*"*20)
+ //   return response
+ //   def do_login():
+//    response = login_before()
+ 
+//    base_url = "http://112.94.69.58:8086/admin"
+ //   AnonID = (etree.HTML(response.text).xpath('//*[@id="AnonID"]/@value'))[0]
+  //  img_url = (etree.HTML(response.text).xpath('//*[@id="capimg"]/@src'))[0]
+ //   img_url = base_url + img_url
+ //   print(img_url)
+//    captcha_form = response
+ //   Email = '*********'
+//    Password = "*************"
+ //   image = requests.get(img_url)
+ //   with open("1.jpg", 'wb+') as f:
+ //       f.write(image.content)
+ //   img = Image.open('1.jpg')
+ //   img.show()
+ //   ver_code = input('输入验证码:')
+ //   url = 'http://112.94.69.58:8086/admin/login'
+ //   payload = username=88BE730E89BB45128D2A86B8F6136BC7A7A40E2FF2EDE5D3&password=7137CE3439BD902AC1592E5093AA4A8701DCC371F93AE57A
+//   #payload = {'Email':Email, 'Password': base64.b64encode(bytes(Password, "utf-8")), 'Captcha': ver_code,
+ //              'Remember': 'false', 'Ver': 'True', 'AnonID':AnonID, 'Title': '',
+//               'RUrl': ''}
+//    #建立一个session,用会话进行请求
+//    session = requests.session()  # 建立一个Session
+//    response=session.post(url, data=payload,headers=headers)
+//    cookies= response.headers['Set-Cookie']
+//    print("post请求获取cookie:",cookies)
+//    document.write(cookies);
+   </script>
+    <br>
+    <img src="https://www.midorg.com/midlogo.png" alt="logo" width="100px" height="100px">
+    <br>
+  </body>
+</html>
